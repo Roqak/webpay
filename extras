@@ -1,0 +1,13 @@
+function getGlobals($name){
+        $sql = "SELECT * FROM `GLOBALS` WHERE `name`='$name'";
+        echo $sql;
+    $result = mysqli_query($connect, $sql);
+    if(!$result){
+            echo "Error: ".mysqli_connect_error();
+    }else{
+        $return_value = mysqli_fetch_assoc($result);
+        $return_value=$return_value['value'];
+        print_r($return_value);
+    }
+    }
+    getGlobals('mac');
