@@ -1,7 +1,7 @@
 <?php
 $host="localhost";
 $username="alumni";
-$password="aA08101091516.";
+$password="";
 $db = "donations";
 // global $connect;
 $connect = mysqli_connect($host, $username, $password,$db);
